@@ -16,10 +16,12 @@ AutoForm.addInputType 'map',
 
 		lat = node.find('.js-lat').val()
 		lng = node.find('.js-lng').val()
+		s = node.find('.js-search').val()
 
 		if lat.length > 0 and lng.length > 0
 			lat: lat
 			lng: lng
+			description: s
 	contextAdjust: (ctx) ->
 		ctx.loading = new ReactiveVar(false)
 		ctx
